@@ -1,10 +1,10 @@
 package Task03.ListBook;
 
 public class ListBook {
-    String author;
-    String title;
+   public static String author;
+    public static String title;
 
-    int yearOfPublis;
+    public static int yearOfPublis;
 
     @Override
     public String toString() {

@@ -3,6 +3,7 @@ package Task03.ListBook;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.Buffer;
+import java.time.Year;
 import java.util.concurrent.BrokenBarrierException;
 
 /*Дан список книг. Книга содержит название, автора и год издания. Необходимо:
@@ -13,7 +14,7 @@ public class Test02 {
     //BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) {
-        //addBooks();
+        addBooks();
         getAuthors("Уотерс Сара");
 
 
@@ -37,8 +38,15 @@ public class Test02 {
 
     public static void getAuthors(String author) {
         ListBook book = new ListBook();
-        //book.getAuthor();
+        book.getAuthor();
         System.out.println(book.getAuthor());
+    }
+
+    public static void getYear(int year){
+        ListBook book = new ListBook();
+        book.getYearOfPublis();
+
+
     }
 }
 
