@@ -1,6 +1,5 @@
 package Task04;
 
-
 import java.util.Scanner;
 
 import static Task04.BankOschad.exchangeToBuyOschad;
@@ -21,7 +20,6 @@ import static Task04.BankPrivat.exchangeToSellPrivat;
 2.3** На её основе сделать программу для конвертации трёх валют в трёх разных банках по двум
  курсам: покупка и продажа. Возможные курсы валют и имена банков известны заранее. Название банка
  , валюты и операции (покупка/продажа) для конвертации вводятся с консоли.
-
 */
 public class Solution {
     public static void main(String[] args) {
@@ -34,17 +32,34 @@ public class Solution {
         BankPrivat bankPrivat = new BankPrivat();
         BankPUMB bankPUMB = new BankPUMB();
         BankOschad bankOschad = new BankOschad();
-        System.out.println("Enter name Bank: (Privat or PUMB or Oschad)  ");
-        String nameOfbank = scan.next();
-        if (bankPrivat.PRIVAT.equalsIgnoreCase(nameOfbank)) {
-            exchangeToBuyPrivat();
-            exchangeToSellPrivat();
-        } else if (bankPUMB.PUMB.equalsIgnoreCase(nameOfbank)) {
-            exchangeToBuyPumb();
-            exchangeToSellPumb();
-        } else if (bankOschad.OSCHAD.equalsIgnoreCase(nameOfbank)) {
-            exchangeToSellOschad();
-            exchangeToBuyOschad();
+        System.out.println("Enter name Bank: (Privat || PUMB || Oschad)  ");
+        String nameOfBank = scan.next();
+        if (bankPrivat.PRIVAT.equalsIgnoreCase(nameOfBank)) {
+            System.out.println("SELL  or BUY");
+            String action = scan.next();
+            if (bankPrivat.Sell.equalsIgnoreCase(action)) {
+                exchangeToSellPrivat();
+            } else if (bankPrivat.Buy.equalsIgnoreCase(action)) {
+                exchangeToBuyPrivat();
+            } else System.out.println("Invalid action name ");
+        } else if (bankPUMB.PUMB.equalsIgnoreCase(nameOfBank)) {
+            System.out.println("SELL  or BUY");
+            String action = scan.next();
+            if (bankPUMB.Sell.equalsIgnoreCase(action)){
+                exchangeToSellPumb();
+            }else if(bankPUMB.Buy.equalsIgnoreCase(action)){
+                exchangeToBuyPumb();
+            }else System.out.println("Invalid action name ");
+        } else if (bankOschad.OSCHAD.equalsIgnoreCase(nameOfBank)) {
+            System.out.println("SELL  or BUY");
+            String action = scan.next();
+            if (bankOschad.Buy.equalsIgnoreCase(action)){
+                exchangeToBuyOschad();
+            }else if (bankOschad.Sell.equalsIgnoreCase(action)){
+                exchangeToSellOschad();
+            }else System.out.println("Invalid action name ");
+
+
         } else System.out.println("Invalid bank name ");
     }
 
