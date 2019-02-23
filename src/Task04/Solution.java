@@ -25,9 +25,7 @@ import static Task04.BankPrivat.exchangeToSellPrivat;
 */
 public class Solution {
     public static void main(String[] args) {
-
         switchBank();
-
 
     }
 
