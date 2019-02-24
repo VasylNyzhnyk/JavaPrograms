@@ -24,7 +24,6 @@ import static Task04.BankPrivat.exchangeToSellPrivat;
 public class Solution {
     public static void main(String[] args) {
         switchBank();
-
     }
 
     public static void switchBank() {
@@ -45,21 +44,19 @@ public class Solution {
         } else if (bankPUMB.PUMB.equalsIgnoreCase(nameOfBank)) {
             System.out.println("SELL  or BUY");
             String action = scan.next();
-            if (bankPUMB.Sell.equalsIgnoreCase(action)){
+            if (bankPUMB.Sell.equalsIgnoreCase(action)) {
                 exchangeToSellPumb();
-            }else if(bankPUMB.Buy.equalsIgnoreCase(action)){
+            } else if (bankPUMB.Buy.equalsIgnoreCase(action)) {
                 exchangeToBuyPumb();
-            }else System.out.println("Invalid action name ");
+            } else System.out.println("Invalid action name ");
         } else if (bankOschad.OSCHAD.equalsIgnoreCase(nameOfBank)) {
             System.out.println("SELL  or BUY");
             String action = scan.next();
-            if (bankOschad.Buy.equalsIgnoreCase(action)){
+            if (bankOschad.Buy.equalsIgnoreCase(action)) {
                 exchangeToBuyOschad();
-            }else if (bankOschad.Sell.equalsIgnoreCase(action)){
+            } else if (bankOschad.Sell.equalsIgnoreCase(action)) {
                 exchangeToSellOschad();
-            }else System.out.println("Invalid action name ");
-
-
+            } else System.out.println("Invalid action name ");
         } else System.out.println("Invalid bank name ");
     }
 

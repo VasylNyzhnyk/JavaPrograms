@@ -55,7 +55,9 @@ class BankPUMB {
         } else if (bankPUMB.ZLT.equalsIgnoreCase(currency)) {
             float uah = amount * bankPUMB.COURSE_toSell_ZLT;
             System.out.println("Give  " + uah + " uah");
-        } else System.err.println("Can't convert to " + currency);
+        } else{ System.err.println("Can't convert to " + currency);
+        }
+
     }
 
 
